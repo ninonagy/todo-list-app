@@ -1,0 +1,32 @@
+.content {
+  /* Center element vertically and horizontally */
+  height: 80%;
+  width: 60%;
+  position: absolute;
+  top:0;bottom: 0;left: 0;right: 0;
+  margin: auto;
+  padding: 1em 1.5em;
+}
+
+.content .header {
+  margin-bottom: 2em;
+}
+.content .header button {
+  margin-right: 20px;
+}
+.content .header .delete {
+  float: right;
+  margin: 0;
+}
+
+.content h2 {
+  display: block;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  margin: 0;
+  font-weight: normal;
+}
+
+.content .opis {
+  margin-top: 1.5em;
+}

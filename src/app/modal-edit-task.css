@@ -1,0 +1,16 @@
+div mat-dialog-content {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+.input {
+  width: 100%;
+}
+
+.text-area {
+  width: 100%;
+}

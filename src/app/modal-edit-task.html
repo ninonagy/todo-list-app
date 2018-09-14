@@ -1,0 +1,23 @@
+<h1 mat-dialog-title> Edit task
+  <a *ngIf="task.showExternalLink" class="fa fa-external-link" (click)="closeModal()" routerLink="/task/{{task.id}}" title="Open task in detail view"></a>
+</h1>
+
+
+<div mat-dialog-content>
+
+  <mat-form-field class="input">
+    <input matInput [(ngModel)]="task.ime" placeholder="Ime zadatka">
+  </mat-form-field>
+
+  <mat-form-field class="text-area">
+    <textarea matInput [(ngModel)]="task.opis" placeholder="Opis zadatka"></textarea>
+  </mat-form-field>
+
+</div>
+
+<div *ngIf="isInputEmpty" style="color:red">Zadatak mora imati ime</div>
+
+<mat-dialog-actions align="end">
+  <button mat-raised-button (click)="closeModal()">Back</button>
+  <button mat-raised-button color="primary" [mat-dialog-close]="task" cdkFocusInitial>Save</button>
+</mat-dialog-actions>

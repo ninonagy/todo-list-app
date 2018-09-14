@@ -1,0 +1,38 @@
+.task-table {
+  /* Center element vertically and horizontally */
+  height: 90%;
+  width: 80%;
+  position: absolute;
+  top:0;bottom: 0;left: 0;right: 0;
+  margin: auto;
+  overflow-y: auto;
+}
+
+.task-table .header {
+  position: sticky;
+  top: 0;
+  padding: 1em 1.5em;
+  z-index: 1;
+  background-color: white;
+}
+
+.task-table .header mat-form-field {
+  width: 30%;
+}
+
+.task-table .header .delete {
+  margin: 1em 0;
+  float: right;
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  width: 20%;
+}
+
+button {
+  margin-left: 20px;
+}

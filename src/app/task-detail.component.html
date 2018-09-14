@@ -1,0 +1,15 @@
+<div class="content mat-elevation-z6">
+  <div class="header">
+    <button mat-raised-button (click)="this.location.back()">Back</button>
+    <button mat-raised-button (click)="onEditClick()">Edit Task</button>
+    <button class="delete" mat-raised-button color="warn" (click)="onDeleteClick()">Delete Task</button>
+  </div>
+
+  <h2>ID: {{task.id}}</h2>
+  <h2>Ime zadatka: {{task.ime}}</h2>
+  <h2>Zapis kreiran: {{task.kreiran | date:'dd.MM.yyyy, HH:mm'}}</h2>
+  <div class="opis">
+    <p style="font-size: 0.8em; color: gray">Opis zadatka:</p>
+    <p>{{task.opis}}</p>
+  </div>
+</div>

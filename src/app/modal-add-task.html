@@ -1,0 +1,20 @@
+<h1 mat-dialog-title>Create task</h1>
+
+<div mat-dialog-content>
+
+  <mat-form-field class="full-width">
+    <input matInput [(ngModel)]="ime" placeholder="Ime zadatka">
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <textarea matInput [(ngModel)]="opis" placeholder="Opis zadatka"></textarea>
+  </mat-form-field>
+
+</div>
+
+<div *ngIf="isInputEmpty" style="color:red">Zadatak mora imati ime</div>
+
+<mat-dialog-actions align="end">
+  <button mat-raised-button (click)="onBackClick()">Back</button>
+  <button mat-raised-button color="primary" (click)="closeModal()" cdkFocusInitial>Create</button>
+</mat-dialog-actions>
