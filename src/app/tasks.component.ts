@@ -43,6 +43,14 @@ export class TasksComponent implements OnInit {
         this.dataSource.sort = this.sort;
       });
     });
+
+    this.dataSource.filterPredicate = (data, filter) => (
+      data.id.indexOf(filter) !== -1 ||
+      data.ime.trim().toLowerCase().indexOf(filter) !== -1 ||
+      data.opis.trim().toLowerCase().indexOf(filter) !== -1 ||
+      ((new Date(data.kreiran).toLocaleDateString('hr')).replace(/\s/g, '') + ', ' + 
+      new Date(data.kreiran).toLocaleTimeString('hr')).indexOf(filter) !== -1 
+    );
   }
 
   openModalAddTask() {
