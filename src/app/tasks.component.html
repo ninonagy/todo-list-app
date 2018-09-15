@@ -16,7 +16,7 @@
          matSort (matSortChange)="sortTasks($event)">
     
     <tr mat-header-row *matHeaderRowDef="tableColumns"></tr>
-    <tr mat-row *matRowDef="let task; columns: tableColumns;" (click)="openModalEditTask(task)" style="cursor: pointer;">
+    <tr class="row" mat-row *matRowDef="let task; columns: tableColumns;" (click)="openModalEditTask(task)">
     </tr>
 
     <ng-container matColumnDef="id">
@@ -36,7 +36,7 @@
 
     <ng-container matColumnDef="kreiran">
       <th style="width:10%;" mat-header-cell *matHeaderCellDef mat-sort-header> Zapis kreiran </th>
-      <td style="width:10%;" mat-cell *matCellDef="let task"> {{task.kreiran | date:'dd.MM.yyyy, HH:mm'}} </td>
+      <td style="width:10%;" mat-cell *matCellDef="let task"> {{task.kreiran | date:'dd.MM.yyyy., HH:mm:ss'}} </td>
     </ng-container>
 
     <ng-container matColumnDef="izaberi">

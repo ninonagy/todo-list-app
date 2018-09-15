@@ -25,6 +25,12 @@
   float: right;
 }
 
+.task-table .row {
+  cursor: pointer;
+} .task-table .row:hover {
+  background-color: ghostwhite;
+}
+
 table {
   width: 100%;
 }
